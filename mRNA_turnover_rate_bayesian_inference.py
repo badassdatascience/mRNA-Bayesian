@@ -7,7 +7,7 @@ import pandas as pd
 import pickle
 
 #
-# load data
+# load mRNA decay rates
 #
 f = open('data/msb201089-df4A.txt')
 degradation_rate_map = {}
@@ -27,7 +27,7 @@ for line in f:
 f.close()
 
 #
-# load more data
+# load knockdown data
 #
 f = open('data/s2.csv')
 kd_list = []
@@ -204,6 +204,9 @@ with open('output/chain.pickled', 'w') as f:
 import sys; sys.exit(0)
 
 
+#
+# In hindsight, I would have used Matplotlib in Python to plot this material.
+#
 f = open('R.R', 'w')
 f.write("""
 
